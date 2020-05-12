@@ -12,11 +12,7 @@ if exists('b:current_syntax')
 endif
 
 if !exists ('b:is_hledger')
-  if exists('g:ledger_is_hledger')
-    let b:is_hledger = 1
-  else
-    let b:is_hledger = 0
-  endif
+  let b:is_hledger = exists('g:ledger_is_hledger')
 endif
 
 " Force old regex engine (:help two-engines)
